@@ -7,6 +7,7 @@ const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
 
+  // console.log(props)
   return (
     <div className='post-border'>
       <PostHeader
@@ -26,9 +27,11 @@ const Post = props => {
         numberOfLikes={post.likes} />
       {/* Comments also wants its props! */}
       <Comments
-        comment={post.comments}/>
+        comments={post.comments}
+        key={post.comments.id}/>
     </div>
   );
 };
+
 
 export default Post;

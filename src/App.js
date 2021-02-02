@@ -45,7 +45,9 @@ function App() {
 
   return (
     <div className='App'>
-
+      {posts.map(post => {
+        return <Posts likePost={post.likes} posts={post} key={post.id} />
+      })}
     </div>
   );
 }
